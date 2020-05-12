@@ -2,7 +2,8 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
+    @page = (params[:page] || 0).to_i
+    @articles = Article.on_created_at.offset(3 * @page).limit(3)
   end
 
   def new

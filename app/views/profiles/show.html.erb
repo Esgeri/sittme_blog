@@ -8,4 +8,4 @@
   <%= @user.username %>'s
   <%= pluralize(@user.articles.count, "article") if @user.articles %>
 </h4>
-<%= render 'articles/article', resources: @user.articles %>
+<%= render 'articles/article', resources: @user.articles.on_created_at %>
