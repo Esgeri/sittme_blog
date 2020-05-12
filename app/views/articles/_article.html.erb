@@ -6,7 +6,7 @@
           <%= link_to article.title, article_path(article) %>
         </div>
         <div class="article-body">
-          <%= truncate(article.description, length: 100) %>
+          <%= raw(article.description).truncate(100).html_safe %>
           <p>
             Created by: <%= article.user.username %>,
             <%= time_ago_in_words(article.created_at) %> ago,
