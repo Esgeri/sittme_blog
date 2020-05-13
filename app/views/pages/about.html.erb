@@ -5,6 +5,11 @@
     <%= link_to 'Welcome page', root_path %>
   </div>
   <div class="col-xs-12 text-center">
-    <%= link_to 'Get json data', json_data_path %>
+    <h3>Cursor Pagination: Get user's data in json format</h3>
+
+    <%= form_tag json_data_path, method: :get do -%>
+      <%= number_field_tag 'cursor', nil, min: 0, :class => 'json_data' %>
+      <%= submit_tag 'Request!' %>
+    <% end %>
   </div>
 </div>

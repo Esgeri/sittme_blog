@@ -6,7 +6,10 @@ class PagesController < ApplicationController
   def about; end
 
   def json_data
-    @users = User.on_created_at
+    cursor = (params[:cursor] || 0).to_i
+
+    @users = User.where("id > ?", cursor).on_created_at
+
     render json: @users
   end
 end
