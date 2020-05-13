@@ -17,6 +17,7 @@ gem 'sassc-rails'
 gem 'devise'
 gem 'ckeditor'
 gem 'active_model_serializers'
+gem 'json-schema'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
