@@ -39,6 +39,7 @@ group :test do
   gem 'faker'
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'rails-controller-testing'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
