@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :about, :json_data]
+  before_action :authenticate_user!, except: [:welcome, :about, :json_data]
 
   def welcome; end
 

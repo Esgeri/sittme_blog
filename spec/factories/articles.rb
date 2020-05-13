@@ -5,4 +5,11 @@ FactoryBot.define do
 
     association :user
   end
+
+  factory :invalid_article, class: 'Article' do
+    title { 'TestTitle' }
+    description { nil }
+
+    association :user
+  end
 end
